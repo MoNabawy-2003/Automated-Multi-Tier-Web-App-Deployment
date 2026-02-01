@@ -11,8 +11,6 @@
 - [Tech Stack](#-tech-stack)
 - [Project Structure](#-project-structure)
 - [How to Run (One-Click Deployment)](#-how-to-run-one-click-deployment)
-- [Troubleshooting & Challenges](#-troubleshooting--challenges)
-- [Author](#-author)
 
 ---
 
@@ -71,3 +69,47 @@ The automation logic is modularized into separate scripts for each tier:
 │   ├── tomcat.sh           # Java setup, Maven Build & Deploy
 │   └── nginx.sh            # Reverse Proxy Config
 └── src/                    # Java Source Code
+
+```
+
+---
+
+## 🕹️ How to Run (One-Click Deployment)
+
+### Step 1: Clone the Repository
+
+```bash
+# Clone the repository to your local machine
+git clone https://github.com/MoNabawy-2003/Automated-Multi-Tier-Web-App-Deployment.git
+
+# Navigate into the project directory
+cd Automated-Multi-Tier-Web-App-Deployment
+
+```
+
+### Step 2: Launch Infrastructure
+
+```bash
+# Execute the main automation command to build the stack
+vagrant up
+
+# -----------------------------------------------------------
+# NOTE: 
+# This command triggers the creation of all 5 Virtual Machines.
+# It will download OS images and run the provisioning scripts.
+# Estimated time: 10-30 minutes (depending on internet speed).
+# -----------------------------------------------------------
+
+```
+
+### Step 3: Verify & Access
+
+```bash
+# 1. Check the status of the machines to ensure they are 'running'
+vagrant status
+
+# 2. Access the application in your browser at:
+# URL: http://192.168.56.11
+# (You should see the vProfile Login Page)
+
+```
