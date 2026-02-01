@@ -52,4 +52,22 @@ The application runs on a distributed system consisting of 5 distinct services:
 
 ## ⚙ Prerequisites
 Before running the project, ensure you have the following installed:
-1.
+1.  [Oracle VirtualBox](https://www.virtualbox.org/)
+2.  [Vagrant](https://www.vagrantup.com/)
+3.  [Git](https://git-scm.com/)
+4.  Git Bash (for Windows users)
+
+---
+
+## 📂 Project Structure
+The automation logic is modularized into separate scripts for each tier:
+
+```bash
+├── Vagrantfile             # Defines VM specs (RAM, CPU, IPs)
+├── scripts/
+│   ├── mysql.sh            # DB setup & Dump Restore
+│   ├── memcache.sh         # Caching setup
+│   ├── rabbitmq.sh         # Broker setup
+│   ├── tomcat.sh           # Java setup, Maven Build & Deploy
+│   └── nginx.sh            # Reverse Proxy Config
+└── src/                    # Java Source Code
